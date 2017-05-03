@@ -17,3 +17,5 @@ Other features I'm interested in, and will be adding:
 - And finally build something useful out of it
 
 If you have any suggestions, please create issue.
+
+Live example of current build can be seen at [https://sickelap.github.io/ng-starter/](https://sickelap.github.io/ng-starter/)
