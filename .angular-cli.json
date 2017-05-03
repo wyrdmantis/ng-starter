@@ -19,7 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "ngs",
       "styles": [
-        "styles.css"
+        "styles.scss",
+        "assets/sb-admin2/sb-admin-2.less"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

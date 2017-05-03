@@ -5,4 +5,5 @@ import {Component} from '@angular/core';
   templateUrl: './app-navigation.component.html'
 })
 export class AppNavigationComponent {
+  isProfileOpen = false;
 }

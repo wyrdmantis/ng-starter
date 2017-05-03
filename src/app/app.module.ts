@@ -1,19 +1,26 @@
-import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {RouterModule} from '@angular/router';
 
 import {AppComponent} from './app.component';
 import {AppLayoutComponent} from 'app/components/app-layout.component';
 import {AppNavigationComponent} from './components/app-navigation.component';
-import {AuthService} from '../modules/shared/services/auth.service';
-import {LoginGuard} from '../modules/shared/services/login-guard.service';
+import {APP_ROUTES} from './app.router';
+import {AdjustContentHeightDirective} from './directives/adjust-content-height.directive';
+import {AuthService} from '../shared/services/auth.service';
+import {LoginGuard} from '../shared/services/login-guard.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppLayoutComponent,
-    AppNavigationComponent
+    AppNavigationComponent,
+    AdjustContentHeightDirective
   ],
-  imports: [BrowserModule],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(APP_ROUTES, {useHash: true})
+  ],
   providers: [
     AuthService,
     LoginGuard

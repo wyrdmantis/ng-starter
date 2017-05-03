@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {LoginData} from '../../shared/models/login-data.model';
+import {LoginData} from '../../../shared/models/login-data.model';
 
 const MIN_PASSWORD_LENGTH = 8;
 const EMAIL_VALIDATOR = Validators.compose([Validators.required, Validators.email]);
