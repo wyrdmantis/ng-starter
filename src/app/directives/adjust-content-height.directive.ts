@@ -1,10 +1,10 @@
-import {Directive, ElementRef, OnInit, Renderer2} from '@angular/core';
+import {Directive, ElementRef, Inject, OnInit, Renderer2} from '@angular/core';
 
 @Directive({
   selector: '[ngsAdjustContentHeight]'
 })
 export class AdjustContentHeightDirective implements OnInit {
-  constructor(private _window: Window, private _el: ElementRef, private _renderer: Renderer2) {
+  constructor(@Inject(Window) private _window: Window, private _el: ElementRef, private _renderer: Renderer2) {
   }
 
   ngOnInit() {
