@@ -8,8 +8,11 @@ module.exports = function (config) {
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
+      require('karma-phantomjs-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
+      require('karma-mocha-reporter'),
+      require('karma-threshold-reporter'),
       require('@angular/cli/plugins/karma')
     ],
     client:{
@@ -31,14 +34,21 @@ module.exports = function (config) {
     angularCli: {
       environment: 'dev'
     },
+    thresholdReporter: {
+      statements: 90,
+      branches: 60,
+      functions: 85,
+      lines: 90
+    },
     reporters: config.angularCli && config.angularCli.codeCoverage
-              ? ['progress', 'coverage-istanbul']
-              : ['progress', 'kjhtml'],
+              ? ['mocha', 'coverage-istanbul', 'threshold']
+              : ['mocha', 'kjhtml'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    // browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
     singleRun: false
   });
 };
