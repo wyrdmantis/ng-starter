@@ -18,4 +18,4 @@ Other features I'm interested in, and will be adding:
 
 If you have any suggestions, please create issue.
 
-Live example of current build can be seen at [https://sickelap.github.io/ng-starter/](https://sickelap.github.io/ng-starter/)
+Live example of current build can be seen at [https://sickelap.github.io/ng-starter/](https://sickelap.github.io/ng-starter/). Because example uses fake login service, for email use anything that resembles real email and any 8+ character password.
