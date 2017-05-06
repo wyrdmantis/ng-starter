@@ -23,7 +23,8 @@ import {LoginGuard} from '../shared/services/login-guard.service';
   ],
   providers: [
     AuthService,
-    LoginGuard
+    LoginGuard,
+    {provide: Window, useValue: window}
   ],
   bootstrap: [AppComponent]
 })
